@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JavaScript Exercise Chapter 1 to 17 </title>
+</head>
+
+<body>
+    <h1>MOHAMMAD MAHAD SHAIKH</h1>
+    <script>
+        
+        // CHAPTER 1 ALERT//
+        // alert("Welcome to JavaScript!");
+        // alert("Hello, World!");
+
+
+        // CHAPTER 2 variables for Strings//
+        var myName = "Mohammad Mahad Shaikh";
+        var say = "Hello, World!";
+        console.log(myName);
+        console.log(say);
+
+
+
+        // CHAPTER 3 variables for Numbers//
+        // EXAMPLE 1
+        var age = 17;
+        var height = 6;
+        console.log(age + ' years old');
+        console.log('I am ' + height + ' ft tall');
+
+        // EXAMPLE 2
+        var x = 40;
+        var y = 20;
+        var sum = x + y;
+        var difference = x - y;
+        var multiply = x * y;
+        var divide = x / y;
+
+        console.log("Sum:", sum);
+        console.log("Difference:", difference);
+        console.log("multiply:", multiply);
+        console.log("divide:", divide);
+
+
+
+
+        // CHAPTER 4 variable Names Legal and Illegal//
+
+        // EXAMPLE 1 LEGAL NAME//
+        // var firstName;
+        // var user_age;
+        // var _counter;
+        // var myvar123;
+        // var camelCasevariable;
+
+        // EXAMPLE 2 ILLEGAL NAME//
+        // var my variable;
+        // var if = 10;
+        // var my-variable;
+        // var $price;
+
+
+
+        // CHAPTER 5 Math expressions:Familiar operators//
+
+        var sum = 5 + 3; // sum is now 8
+        var difference = 10 - 4; // difference is now 6
+        var remainder = 15 % 4; // remainder is now 3
+        var count = 5; count++; // count is now 6
+        var number = 8; number--; // number is now 7
+        var x = 10; // x is assigned the value 10
+        var isNotEqual = 8 != 3; // isNotEqual is true
+        var greater = 10 > 5; // greater is true
+        var lessOrEqual = 7 <= 3; // lessOrEqual is false
+
+
+
+
+        // CHAPTER 6 Math expressions: Unfamiliar operators //
+
+        var result = 5 & 3; // result is 1 (binary: 0101 & 0011)
+        var result = 5 | 3; // result is 7 (binary: 0101 | 0011)
+        var result = 5 ^ 3; // result is 6 (binary: 0101 ^ 0011)
+        var result = ~5; // result is -6 (bitwise NOT of 5)
+        var result = (5 > 3) && (4 < 8); // result is true  
+        var result = (5 > 3) || (4 > 8); // result is true
+        var result = !(5 > 3); // result is false
+
+        var age = 20;
+        var status = (age >= 18) ? "Adult" : "Minor";
+
+        var variabvarype = typeof "Hello"; // variabvarype is "string"
+
+        var fruits = ["apple", "banana", "orange"];
+        var hasApple = "apple" in fruits; // hasApple is true
+
+
+
+
+        // CHAPTER 7 Math expressions: Eliminating ambiguity //
+        // Example 1: 5 + 3 * 2
+        var result1 = 5 + (3 * 2);
+        console.log("1. 5 + 3 * 2 =", result1);
+
+        // Example 2: 8 - 4 / 2
+        var result2 = 8 - (4 / 2);
+        console.log("2. 8 - 4 / 2 =", result2);
+
+        // Example 3: 2 * (3 + 4)
+        var result3 = 2 * (3 + 4);
+        console.log("3. 2 * (3 + 4) =", result3);
+
+        // Example 4: (10 - 2) / (4 + 1)
+        var result4 = (10 - 2) / (4 + 1);
+        console.log("4. (10 - 2) / (4 + 1) =", result4);
+
+
+
+
+        //  CHAPTER 8 Concatenating text strings //
+        //  Example 1: Using the '+' Operator
+        var firstName = "Mahad";
+        var lastName = "Shaikh";
+
+        var fullName = firstName + " " + lastName;
+        console.log("Full Name:", fullName); // Output: Mahad Shaikh
+
+
+        //  Example 2: Concatenating with variables //
+        var greeting = "Hello";
+        var target = "World";
+
+        var message = greeting + ", " + target + "!";
+        console.log("Message:", message); // Output: Hello, World!
+
+
+
+
+        //  CHAPTER 9 Prompts //
+        //  Example 1: Simple Prompt
+        var userName = prompt("Enter your name:");
+        console.log("Hello, " + userName + "!");
+
+        //  Example 2: Converting Prompt Input to a Number
+        var age = prompt("Enter your age:");
+        age = Number(age); // Convert the input to a number
+
+        console.log("Next year, you will be " + (age + 1) + " years old.");
+
+
+
+
+        //  CHAPTER 10 if statements //
+        //  Example 1: Simple if Statement
+        var temperature = 20;
+
+        if (temperature > 18) {
+            console.log("cool day!");
+        }
+
+        //  Example 2: if-else Statement
+        var time = 14;
+
+        if (time < 12) {
+            console.log("Assalmo Alaikum!");
+        } else {
+            console.log("Allah Hafiz!");
+        }
+
+
+
+        //  CHAPTER 11 Comparison operators //
+        //  Example 1: Examples of Comparison Operators:
+        var a = 5;
+        var b = "5";
+
+        if (a == b) {
+            console.log("Equal");
+        } else {
+            console.log("Not equal");
+        }
+        // Output: Equal (loose equality, type coercion)
+
+        //  Example 2 Not Equal (!=) and Strict Not Equal (!==)
+        var p = 8;
+        var q = "8";
+
+        if (p != q) {
+            console.log("Not equal");
+        } else {
+            console.log("Equal");
+        }
+        // Output: Not equal (loose inequality, type coercion)
+
+        if (p !== q) {
+            console.log("Not strictly equal");
+        } else {
+            console.log("Strictly equal");
+        }
+        // Output: Strictly equal (strict inequality, no type coercion)
+
+
+
+        //  CHAPTER 12 if...else and else if statements //
+        //  Example 1: if...else Statement
+        var temperature = 25;
+
+        if (temperature > 20) {
+            console.log("warm day!");
+        } else {
+            console.log("not a warm day.");
+        }
+
+        //  Example 2: else if Statement
+        var time = 14;
+
+        if (time < 12) {
+            console.log("Good morning!");
+        } else if (time < 18) {
+            console.log("Good afternoon!");
+        } else {
+            console.log("Good evening!");
+        }
+
+
+
+        //  CHAPTER 13 Testing sets of conditions //
+        //  Example 1: Using Logical AND (&&)
+        var age = 25;
+        var hasLicense = true;
+
+        if (age >= 18 && hasLicense) {
+            console.log("Drive Car.");
+        } else {
+            console.log("Use Bicycle.");
+        }
+
+        //  Example 2: Using Logical OR (||)
+        var dayOfWeek = "Sunday";
+
+        if (dayOfWeek === "Saturday" || dayOfWeek === "Sunday") {
+            console.log("It's the weekend!");
+        } else {
+            console.log("It's a weekday. Keep working!");
+        }
+
+        //  Example 3: Using Logical NOT (!)
+        var isRaining = false;
+
+        if (!isRaining) {
+            console.log("It's not raining. Enjoy the weather!");
+        } else {
+            console.log("Better bring an umbrella.");
+        }
+
+
+        //  CHAPTER 14 if statements nested//
+        //  Example 1: Nested if Statements
+        var temperature = 25;
+        var timeOfDay = "morning";
+
+        if (temperature > 20) {
+            console.log("It's a warm day!");
+
+            if (timeOfDay === "morning") {
+                console.log("Good morning!");
+            } else {
+                console.log("Good day!");
+            }
+        } else {
+            console.log("It's not a warm day.");
+        }
+
+
+        // Example 2: Using else if with Nested if Statements
+        var score = 75;
+
+        if (score >= 90) {
+            console.log("Excellent!");
+        } else if (score >= 70) {
+            console.log("Good job!");
+
+            if (score >= 80) {
+                console.log("You're doing well!");
+            } else {
+                console.log("Keep it up!");
+            }
+        } else {
+            console.log("You need to improve.");
+        }
+
+
+
+        //  CHAPTER 15 Arrays//
+        //  Example 1: Creating and Accessing Arrays
+        // Creating an array of numbers
+        var numbers = [1, 2, 3, 4, 5];
+
+        // Accessing elements in the array
+        console.log("First element:", numbers[0]); // Output: 1
+        console.log("Third element:", numbers[2]); // Output: 3
+
+        //  Example 2: Modifying Arrays
+        // Modifying elements in the array
+        numbers[1] = 10;
+
+        // Adding elements to the end of the array
+        numbers.push(6);
+
+        // Removing the last element from the array
+        numbers.pop();
+
+        console.log("Modified array:", numbers); // Output: [1, 10, 3, 4, 5]
+
+
+        // Example 3: Array of Strings
+        // Creating an array of strings
+        var fruits = ['Apple', 'Banana', 'Orange'];
+
+        // Accessing and modifying elements in the array
+        console.log("First fruit:", fruits[0]); // Output: Apple
+        fruits[1] = 'Grapes';
+
+        // Adding elements to the end of the array
+        fruits.push('Mango');
+
+        console.log("Updated array:", fruits); // Output: ['Apple', 'Grapes', 'Orange', 'Mango']
+
+
+
+        //  CHAPTER 16 Arrays: Adding and removing elements //
+        //  Example 1: Adding Elements to the End with push()
+        // Creating an array
+        var fruits = ['Apple', 'Banana', 'Orange'];
+
+        // Adding an element to the end of the array
+        fruits.push('Grapes');
+
+        console.log("Updated array:", fruits); // Output: ['Apple', 'Banana', 'Orange', 'Grapes']
+
+
+        //  Example 2: Adding Elements to the Beginning with unshift()
+        // Adding an element to the beginning of the array
+        fruits.unshift('Mango');
+
+        console.log("Updated array:", fruits); // Output: ['Mango', 'Apple', 'Banana', 'Orange', 'Grapes']
+
+
+        // Example 3: Removing Elements from the End with pop()
+        // Removing the last element from the array
+        var removedFruit = fruits.pop();
+
+        console.log("Removed:", removedFruit); // Output: Grapes
+        console.log("Updated array:", fruits); // Output: ['Mango', 'Apple', 'Banana', 'Orange']
+
+
+        //  CHAPTER 17 Arrays: Removing, inserting, and extracting elements  //
+        //  Example 1: Removing Elements with splice()
+        // Creating an array
+        var fruits = ['Apple', 'Banana', 'Orange', 'Grapes', 'Mango'];
+
+        // Removing elements at a specific index
+        var removedElements = fruits.splice(2, 2);
+
+        console.log("Removed elements:", removedElements); // Output: ['Orange', 'Grapes']
+        console.log("Updated array:", fruits); // Output: ['Apple', 'Banana', 'Mango']
+
+        //  Example 2: Inserting Elements with splice()
+        // Inserting elements at a specific index
+        fruits.splice(1, 0, 'Pineapple', 'Kiwi');
+
+        console.log("Updated array:", fruits); // Output: ['Apple', 'Pineapple', 'Kiwi', 'Banana', 'Mango']
+
+        //  Example 3: Extracting a Portion of the Array with slice()
+        // Extracting a portion of the array
+        var slicedArray = fruits.slice(1, 4);
+
+        console.log("Sliced array:", slicedArray); // Output: ['Pineapple', 'Kiwi', 'Banana']
+
+    </script>
+</body>
+
+</html>
